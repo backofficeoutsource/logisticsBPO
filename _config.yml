@@ -1,6 +1,6 @@
 title: Logistics BPO Blog
 description: Insights on Logistics Outsourcing, Freight Audit & Back Office
-theme: minima
+
 paginate: 5
 
 markdown: kramdown
@@ -13,6 +13,4 @@ author:
   name: Logistics BPO
   email: info@example.com
 
-# Optional but nice
 permalink: /:categories/:title/
-
