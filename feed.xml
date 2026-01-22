@@ -6,7 +6,7 @@
     <atom:link href="https://backofficeoutsource.github.io/logisticsBPO/feed.xml" rel="self" type="application/rss+xml" />
     <description>Resource articles and industry insights for freight audit, payment, and logistics optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jan 2024 12:00:00 +0000</lastBuildDate>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
 
     <!-- ITEM 1 -->
@@ -14,19 +14,18 @@
       <title>How Freight Invoice Errors Increase Supply Chain Costs</title>
       <link>https://ext-6888139.livejournal.com/702.html</link>
       <guid isPermaLink="true">https://ext-6888139.livejournal.com/702.html</guid>
-      <pubDate>Tue, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Jan 2024 10:30:00 +0000</pubDate>
       <description>Discussion on how freight billing errors impact logistics operations and increase supply chain costs, with recommendations for mitigation.</description>
     </item>
 
     <!-- ITEM 2 -->
     <item>
-      <title>Freight Audit Technology Landscape: Tools, Integrations & Future Trends</title>
+      <title>Freight Audit Technology Landscape: Tools, Integrations &amp; Future Trends</title>
       <link>https://infinitylogistics.mystrikingly.com/blog/freight-audit-technology-landscape-tools-integrations-future-trends</link>
       <guid isPermaLink="true">https://infinitylogistics.mystrikingly.com/blog/freight-audit-technology-landscape-tools-integrations-future-trends</guid>
-      <pubDate>Mon, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <description>Overview of modern freight audit technology advancements including software tools, system integrations, and emerging logistics trends.</description>
+      <pubDate>Sun, 14 Jan 2024 09:00:00 +0000</pubDate>
+      <description>Overview of freight audit technologies including modern tools, system integrations, and future logistics trends.</description>
     </item>
 
   </channel>
 </rss>
-
