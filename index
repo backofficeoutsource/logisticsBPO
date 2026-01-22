@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Logistics Back Office - Freight Audit & Payment Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #10b981;
+            --dark-color: #1f2937;
+            --light-color: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .btn-hero {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: var(--light-color);
+            transform: translateX(10px);
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .benefit-content h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, var(--light-color), white);
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .process-step h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Articles Section */
+        .articles-section {
+            padding: 80px 0;
+            background: var(--dark-color);
+            color: white;
+        }
+
+        .article-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .article-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .article-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .article-card a:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--accent-color), #059669);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Stats Section */
+        .stats-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stats-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .stats-label {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-truck-moving me-2"></i>Infinity Logistics Back Office
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success text-white ms-2 px-4" href="#contact">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content">
+                    <h1 class="hero-title">Transform Your Freight Audit & Payment Operations</h1>
+                    <p class="hero-subtitle">Reduce logistics costs by 10-20% with our specialized back office services for freight audit and payment management</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#contact" class="btn btn-success btn-hero btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Start Saving Now
+                        </a>
+                        <a href="#services" class="btn btn-outline-light btn-hero btn-lg">
+                            <i class="fas fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-box">
+                                <div class="stats-number">5-15%</div>
+                                <div class="stats-label">Average Cost Recovery</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-box">
+                                <div class="stats-number">99.5%</div>
+                                <div class="stats-label">Invoice Accuracy</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-box">
+                                <div class="stats-number">24-48h</div>
+                                <div class="stats-label">Processing Time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center d-none d-lg-block">
+                    <i class="fas fa-file-invoice-dollar" style="font-size: 20rem; opacity: 0.2;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Specialized Services</h2>
+            <p class="section-subtitle">Comprehensive freight audit and payment solutions tailored to your business needs</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="service-title">Freight Invoice Auditing</h3>
+                        <p>Comprehensive verification of transportation invoices against contracted rates, weight validation, and accessorial charge scrutiny. We identify billing errors that typically cost businesses 8-15% of freight spend annually.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Rate verification</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Weight validation</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Accessorial review</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Duplicate detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3 class="service-title">Freight Payment Processing</h3>
+                        <p>Streamlined payment execution with consolidated invoicing, electronic fund transfers, and remittance management. Maintain positive carrier relationships through timely, accurate payments.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Consolidated billing</li>
+                            <li><i class="fas fa-check text-success me-2"></i>ACH/Wire transfers</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Payment scheduling</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Audit trail maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="service-title">Dispute Management</h3>
+                        <p>Professional handling of invoice discrepancies with carriers including documentation assembly, submission tracking, and persistent follow-up until resolution.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Carrier communication</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Documentation support</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Resolution tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Recovery optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3 class="service-title">Contract Rate Auditing</h3>
+                        <p>Systematic validation ensuring carriers honor negotiated agreements. Leverage audit findings during contract renewals for improved terms and better rates.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Contract compliance</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Rate benchmarking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Performance tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Negotiation support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">Freight Analytics & Reporting</h3>
+                        <p>Transform raw invoice data into strategic insights with comprehensive dashboards showing spending patterns, carrier performance, and optimization opportunities.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Spend analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Carrier scorecards</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Cost trends</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom reporting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="service-title">Back Office Data Management</h3>
+                        <p>Comprehensive administrative support including invoice data entry, document archival, exception investigation, and carrier communication management.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Data entry/OCR</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Document management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Exception handling</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Quality assurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Back Office Services?</h2>
+            <p class="section-subtitle">Discover the competitive advantages of partnering with freight audit specialists</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Significant Cost Reduction</h4>
+                            <p>Recover 5-15% of annual freight spend through systematic error detection and overcharge recovery. Our clients typically save $50,000-$500,000+ annually depending on shipping volume.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Specialized Expertise</h4>
+                            <p>Access logistics billing professionals with deep knowledge of carrier tariffs, contract structures, and industry billing practices. Our team brings expertise that takes years to develop internally.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Scalable Operations</h4>
+                            <p>Handle volume fluctuations seamlessly without hiring or layoffs. We scale resources during peak periods and reduce during slower months, optimizing your costs year-round.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Time Efficiency</h4>
+                            <p>Free your internal teams from labor-intensive invoice processing. What takes accounting teams days, we accomplish in hours through specialized workflows and automation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Advanced Technology</h4>
+                            <p>Leverage sophisticated freight audit software, warehouse management integrations, and analytics platforms without capital investment in technology infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Enhanced Visibility</h4>
+                            <p>Gain real-time insights into transportation spending with comprehensive dashboards, carrier performance metrics, and trend analysis that inform strategic decisions.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Better Carrier Relations</h4>
+                            <p>Professional dispute management maintains positive partnerships. Carriers appreciate accurate payment for legitimate services while respecting rigorous verification.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Risk Mitigation</h4>
+                            <p>Reduce financial exposure through comprehensive audit controls, duplicate detection, and systematic validation preventing payment of fraudulent or erroneous charges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2 class="section-title">Our Proven Process</h2>
+            <p class="section-subtitle">Simple, efficient workflow designed for maximum results with minimal disruption</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Discovery & Setup</h4>
+                        <p>We analyze your current freight operations, integrate with your systems, and configure audit rules based on your carrier contracts and business requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Invoice Processing</h4>
+                        <p>Automated receipt of freight invoices via EDI, email, or carrier portals. Our systems extract data using OCR technology and validate against shipment documentation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Audit & Recovery</h4>
+                        <p>Comprehensive validation identifies billing errors. We document discrepancies, submit disputes to carriers, and pursue resolution until overcharges are recovered.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Payment & Reporting</h4>
+                        <p>Approved invoices are processed for payment according to your terms. Comprehensive reports provide visibility into spending, recoveries, and carrier performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-calendar-check me-2"></i>Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <h2 class="section-title text-white">Industry Insights & Resources</h2>
+            <p class="section-subtitle text-white-50">Stay informed with expert articles on freight audit and logistics optimization</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="article-card">
+                        <div class="mb-3">
+                            <i class="fas fa-newspaper" style="font-size: 2.5rem; color: var(--accent-color);"></i>
+                        </div>
+                        <h4>How Freight Invoice Errors Increase Supply Chain Costs</h4>
+                        <p class="mb-3">Discover the hidden impact of billing errors on your supply chain efficiency and bottom line. Learn how systematic auditing prevents costly mistakes.</p>
+                        <a href="https://ext-6888139.livejournal.com/702.html" target="_blank">
+                            Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="article-card">
+                        <div class="mb-3">
+                            <i class="fas fa-laptop-code" style="font-size: 2.5rem; color: var(--accent-color);"></i>
+                        </div>
+                        <h4>Freight Audit Technology Landscape: Tools, Integrations & Future Trends</h4>
+                        <p class="mb-3">Explore the latest technology innovations transforming freight audit operations. From AI-powered validation to predictive analytics capabilities.</p>
+                        <a href="https://infinitylogistics.mystrikingly.com/blog/freight-audit-technology-landscape-tools-integrations-future-trends" target="_blank">
+                            Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="article-card">
+                        <h4><i class="fas fa-book me-2"></i>Knowledge Base</h4>
+                        <p>Access comprehensive guides on freight auditing, payment processing, and logistics cost management strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="article-card">
+                        <h4><i class="fas fa-video me-2"></i>Webinars</h4>
+                        <p>Join our experts for live sessions covering industry trends, best practices, and emerging technologies in freight management.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="article-card">
+                        <h4><i class="fas fa-file-pdf me-2"></i>Case Studies</h4>
+                        <p>Read real-world success stories showing how businesses reduced costs and improved operations with our solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Reduce Your Logistics Costs?</h2>
+            <p class="fs-5 mb-4">Join hundreds of businesses saving 10-20% on freight expenses through professional back office services</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="bg-white text-dark p-5 rounded-4 shadow-lg">
+                        <h3 class="mb-4">Get Your Free Freight Audit Assessment</h3>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Company Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                            </div>
+                            <div class
