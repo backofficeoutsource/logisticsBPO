@@ -5,7 +5,8 @@ Freight audit providers play a critical role in helping logistics, transportatio
 </p>
 
 <p>
-This article explains what freight audit providers do, how to evaluate them, and what benefits to expect in terms of savings, productivity, and data visibility.
+This article explains what freight audit providers do, how to evaluate them, and what benefits to expect in terms of savings, productivity, and data visibility. To learn more about the role of freight audit outsourcing, you can also explore this detailed guide on 
+<a href="https://infinity-logisticsbackoffice.com/freight-audit-and-payment-guide/" target="_blank">Freight Audit Provider</a>.
 </p>
 
 <h2>What Does a Freight Audit Provider Do?</h2>
@@ -68,7 +69,7 @@ Choosing the right provider depends on your business size, modes of transport, g
 <h2>Outsourcing vs In-House Freight Audit</h2>
 
 <p>
-One of the major decisions logistics teams face is whether to audit freight internally or outsource the function entirely. In-house processes give control but require staffing, systems, integrations, and audit expertise. Outsourcing shifts the operational burden to specialists who already manage dispute resolution workflows, audit tools, and payment relations with carriers.
+One major decision logistics teams face is whether to audit freight internally or outsource the function entirely. In-house processes give control but require staffing, systems, integrations, and audit expertise. Outsourcing shifts the operational burden to specialists who already manage dispute resolution workflows, audit tools, and payment relations with carriers.
 </p>
 
 <p>
