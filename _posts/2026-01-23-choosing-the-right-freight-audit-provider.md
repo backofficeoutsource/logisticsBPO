@@ -80,7 +80,6 @@ Outsourcing vs in-house freight audit
 </a>
 </p>
 
-<h2>Final Thoughts</h2>
 
 <p>
 Supply chain volatility, rising freight rates, and complex carrier billing environments have made freight auditing an essential logistics function. By partnering with an experienced freight audit provider, companies gain financial accuracy, operational speed, and clear visibility into transportation spending. For many shippers, this partnership produces a rapid return on investment through avoided overcharges and enhanced decision-making.
