@@ -24,7 +24,7 @@ permalink: /blog/
         <h4 class="text-success">{{ post.title }}</h4>
         <p class="text-light small">{{ post.date | date: "%B %d, %Y" }}</p>
         <p class="text-light">{{ post.excerpt }}</p>
-        <a href="{{ post.url }}" class="text-warning fw-bold">Read Full Article →</a>
+        <a href="{{ site.baseurl }}{{ post.url }}">" class="text-warning fw-bold">Read Full Article →</a>
       </div>
     </div>
     {% endfor %}
@@ -34,4 +34,5 @@ permalink: /blog/
 </body
   <p>Post count: {{ site.posts | size }}</p>
 </html>
+
 
