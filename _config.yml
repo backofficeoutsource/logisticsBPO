@@ -1,8 +1,11 @@
 title: Logistics BPO Blog
 description: Insights on Logistics Outsourcing, Freight Audit & Back Office
 
-paginate: 5
+# REQUIRED FOR PROJECT SITES
+baseurl: "/logisticsBPO"
+url: "https://backofficeoutsource.github.io"
 
+paginate: 5
 markdown: kramdown
 
 plugins:
@@ -13,4 +16,4 @@ author:
   name: Logistics BPO
   email: info@example.com
 
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title/
