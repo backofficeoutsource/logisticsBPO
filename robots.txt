@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://backofficeoutsource.github.io/logisticsBPO/sitemap.xml
+
