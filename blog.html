@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 title: Blog
 permalink: /blog/
 ---
@@ -19,20 +19,19 @@ permalink: /blog/
   <div class="row g-4">
 
     {% for post in site.posts %}
-    <div class="col-md-6">
-      <div class="p-4 bg-secondary rounded shadow-sm h-100">
-        <h4 class="text-success">{{ post.title }}</h4>
-        <p class="text-light small">{{ post.date | date: "%B %d, %Y" }}</p>
-        <p class="text-light">{{ post.excerpt }}</p>
-        <a href="{{ site.baseurl }}{{ post.url }}">" class="text-warning fw-bold">Read Full Article →</a>
+      <div class="col-md-6">
+        <div class="p-4 bg-secondary rounded shadow-sm h-100">
+          <h4 class="text-success">{{ post.title }}</h4>
+          <p class="text-light small">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p class="text-light">{{ post.excerpt }}</p>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="text-warning fw-bold">Read Full Article →</a>
+        </div>
       </div>
-    </div>
     {% endfor %}
 
   </div>
 </div>
-</body
-  <p>Post count: {{ site.posts | size }}</p>
+
+<p class="text-center text-muted small">Post count: {{ site.posts | size }}</p>
+</body>
 </html>
-
-
