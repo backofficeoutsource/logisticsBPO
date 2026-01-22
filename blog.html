@@ -20,7 +20,7 @@ permalink: /blog/
 
     {% for post in site.posts %}
       <div class="col-md-6">
-        <div class="p-4 bg-secondary rounded shadow-sm h-100">
+          <div class="p-4 bg-white text-dark rounded shadow-sm border h-100">
           <h4 class="text-success">{{ post.title }}</h4>
           <p class="text-light small">{{ post.date | date: "%B %d, %Y" }}</p>
           <p class="text-light">{{ post.excerpt }}</p>
@@ -35,3 +35,4 @@ permalink: /blog/
 <p class="text-center text-muted small">Post count: {{ site.posts | size }}</p>
 </body>
 </html>
+
