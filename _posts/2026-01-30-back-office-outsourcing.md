@@ -256,7 +256,11 @@ reading_time: 8
 </style>
 
 <div class="blog-content">
-    <p class="lead">
+    <h1 style="font-size: 2.8rem; color: #059669; margin-bottom: 2rem; font-weight: 800; line-height: 1.2;">
+        Complete Guide to Logistics Back Office Outsourcing 2026
+    </h1>
+    
+    <p class="lead" style="color: #059669; font-weight: 500;">
         In today's rapidly evolving logistics landscape, companies are constantly seeking ways to optimize operations, reduce costs, and maintain competitive advantages. Logistics back office outsourcing has emerged as a game changing solution.
     </p>
 
