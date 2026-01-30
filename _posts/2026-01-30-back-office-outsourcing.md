@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+---
+layout: post
+title: "Complete Guide to Logistics Back Office Outsourcing 2026"
+date: 2026-01-30
+permalink: /back-office-outsourcing/
+---
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Guide to Logistics Back Office Outsourcing 2026</title>
@@ -868,5 +871,4 @@
             });
         });
     </script>
-</body>
-</html>
+
