@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Guide to Logistics Back Office Outsourcing 2026 | Expert Insights</title>
-    <meta name="description" content="Comprehensive guide to logistics back office outsourcing. Learn what BPO is, how it works, challenges without outsourcing, and in house vs outsourced comparison.">
+    <title>Complete Guide to Logistics Back Office Outsourcing 2026</title>
+    <meta name="description" content="Comprehensive guide to logistics back office outsourcing. Learn what BPO is, how it works, and key benefits.">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -35,12 +35,6 @@
             color: #334155;
             background: #ffffff;
             overflow-x: hidden;
-        }
-        
-        body::before {
-            content: '';
-            display: block;
-            height: 0;
         }
         
         /* Typography */
@@ -520,6 +514,16 @@
             width: 0%;
             z-index: 9999;
             transition: width 0.1s ease;
+        }
+        
+        /* Hide any potential stray text */
+        body::before {
+            content: none !important;
+            display: none !important;
+        }
+        
+        .blog-header {
+            margin-top: 0 !important;
         }
     </style>
 </head>
