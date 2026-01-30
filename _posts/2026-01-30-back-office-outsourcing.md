@@ -34,6 +34,13 @@
             line-height: 1.8;
             color: #334155;
             background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            display: block;
+            height: 0;
         }
         
         /* Typography */
@@ -234,9 +241,13 @@
         }
         
         .highlight-box h4 {
-            color: #92400e;
+            color: #78350f;
             margin-top: 0;
             font-size: 1.3rem;
+        }
+        
+        .highlight-box p {
+            color: #451a03;
         }
         
         .info-box {
@@ -250,6 +261,10 @@
         .info-box h4 {
             color: #1e40af;
             margin-top: 0;
+        }
+        
+        .info-box p {
+            color: #1e3a8a;
         }
         
         /* Blog Images */
@@ -329,6 +344,10 @@
         .comparison-table td {
             padding: 1.3rem 1.5rem;
             border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-table .small {
+            color: #1e293b;
         }
         
         .comparison-table tbody tr:hover {
@@ -571,7 +590,7 @@
                 <div class="col-lg-8 order-lg-1">
                     <div class="blog-content">
                         <section id="introduction">
-                            <p class="lead" style="font-size: 1.3rem; font-weight: 300; color: var(--medium-gray);">
+                            <p class="lead" style="font-size: 1.3rem; font-weight: 400; color: #1e293b;">
                                 In today's rapidly evolving logistics landscape, companies are constantly seeking ways to optimize operations, reduce costs, and maintain competitive advantages. Logistics back office outsourcing has emerged as a game changing solution.
                             </p>
 
