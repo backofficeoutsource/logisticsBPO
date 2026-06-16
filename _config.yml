@@ -1,14 +1,10 @@
 title: Logistics BPO Blog
 description: Insights on Logistics Outsourcing, Freight Audit & Back Office
-
 url: "https://backofficeoutsource.github.io"
 baseurl: "/logisticsBPO"
-
 markdown: kramdown
 future: true
-
+permalink: /:title/
 author:
   name: Logistics BPO
   email: info@infinity-logisticsbackoffice.com
-
-permalink: "/:title/"
